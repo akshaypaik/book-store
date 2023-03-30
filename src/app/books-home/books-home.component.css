@@ -1,0 +1,79 @@
+.bookHeaderText {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.searchBar {
+    margin-top: 5% !important;
+}
+
+.allBooksHeader {
+    color: #356483;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.book-card {
+    max-width: 400px;
+    margin-bottom: 3%;
+    padding: 1% !important;
+    border-radius: 8%;
+    border-bottom: none !important;
+}
+
+p-card ::ng-deep .p-card-body {
+    padding: 1.25rem;
+    background-color: antiquewhite !important;
+}
+
+p-card ::ng-deep .p-component{
+    margin-bottom: 3%;
+}
+
+.book-block{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.surface-card{
+    color: #356483;
+    border-left: 6px solid orange;
+}
+
+.searchIcon{
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.searchInput{
+    z-index: 0;
+    padding-top: 0%;
+    font-family: FontAwesome;
+}
+
+p-scrollpanel ::ng-deep .p-scrollpanel-bar {
+    background: dodgerblue !important;
+    border: 1px solid grey;
+}
+
+p-calendar ::ng-deep .p-calendar{
+    width: 57% !important;
+} 
+
+.newBookButton{
+    float: right;
+}

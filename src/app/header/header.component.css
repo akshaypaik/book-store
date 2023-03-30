@@ -1,0 +1,254 @@
+body {
+    background-color: #fbfbfb;
+}
+
+@media (min-width: 991.98px) {
+    main {
+        padding-left: 240px;
+    }
+}
+
+/* Sidebar */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: calc(100vh - 650px);
+
+    /* height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    overflow-x: hidden;
+    padding: 58px 0 0; */
+}
+
+li {
+    list-style-type: none;
+}
+
+.iconStyle {
+    padding-top: 7%;
+    margin-left: 25%;
+}
+
+.iconNameStyle {
+    margin-left: -12%;
+    margin-top: -3%;
+}
+
+.listBlock {
+    margin-top: 7%;
+}
+
+.iconNameStyle a {
+    color: grey;
+}
+
+.listBlockChild {
+    display: none;
+}
+
+.listBlock:hover .listBlockChild {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.listBlockChild .iconNameStyle {
+    margin-left: 25%;
+}
+
+.listBlockChild .iconNameStyle:hover .nav-link {
+    color: dodgerblue;
+}
+
+.listBlock .iconNameStyle:hover .parentNavLink {
+    color: dodgerblue;
+}
+
+@media (max-width: 993px) {
+    .collapse {
+        font-size: 6px;
+    }
+
+    .offcanvas {
+        position: fixed;
+        top: 15%;
+        bottom: 0;
+        left: 0%;
+        padding: 58px 0 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: calc(100vh - 650px);
+    }
+
+    .iconNameStyle {
+        margin-left: 15%;
+        margin-top: -3%;
+    }
+
+    .iconStyle {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 800px) {
+    .collapse {
+        font-size: 6px;
+    }
+
+    .offcanvas {
+        position: fixed;
+        top: 0%;
+        bottom: 0;
+        left: 0%;
+        padding: 58px 0 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: calc(100vh - 650px);
+    }
+
+    .iconNameStyle {
+        margin-left: -15% !important;
+        margin-top: -3%;
+        font-size: 3px !important;
+    }
+
+    .iconStyle {
+        font-size: 6px;
+    }
+
+    .listBlockChild .iconNameStyle {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .collapse {
+        font-size: 8px;
+    }
+
+    .offcanvas {
+        position: fixed;
+        top: 15%;
+        bottom: 0;
+        left: 0%;
+        padding: 58px 0 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: calc(100vh - 650px);
+    }
+
+    .iconNameStyle {
+        margin-left: 15%;
+        margin-top: -3%;
+    }
+
+    .iconStyle {
+        font-size: 8px;
+    }
+
+    .listBlockChild .iconNameStyle {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .collapse {
+        font-size: 9px;
+    }
+
+    .offcanvas {
+        position: fixed;
+        top: 15%;
+        bottom: 0;
+        left: 0%;
+        padding: 58px 0 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: calc(100vh - 650px);
+    }
+
+    .iconNameStyle {
+        margin-left: 15%;
+        margin-top: -3%;
+    }
+
+    .iconStyle {
+        font-size: 12px;
+    }
+
+    .listBlockChild .iconNameStyle {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .collapse {
+        font-size: 8px;
+    }
+
+    .offcanvas {
+        position: fixed;
+        top: 15%;
+        bottom: 0;
+        left: 0%;
+        padding: 58px 0 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: calc(100vh - 650px);
+    }
+
+    .iconNameStyle {
+        margin-left: 15%;
+        margin-top: -3%;
+    }
+
+    .iconStyle {
+        font-size: 10px;
+    }
+
+    .listBlockChild .iconNameStyle {
+        margin-left: 0%;
+    }
+
+    .closebtn {
+        position: relative;
+        top: 0;
+        right: 25px;
+        margin-left: 50px;
+        color: red;
+    }
+}
+
+.headerBrand {
+    position: absolute;
+    left: 16%;
+    font-size: 2rem;
+    color: blue;
+    font-weight: 500;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: red;
+}
+
+@media screen and (max-height: 450px) {
+    .offcanvas {
+        padding-top: 15px;
+    }
+
+    .offcanvas a {
+        font-size: 18px;
+    }
+}

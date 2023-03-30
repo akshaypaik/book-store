@@ -1,0 +1,26 @@
+.bookHeaderText {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.conatiner{
+    margin-left: 16%;
+}
+
+@media (min-width: 2000px){
+    .conatiner{
+        margin-left: 26%;
+    }
+}
+
+@media (min-width: 3800px){
+    .conatiner{
+        margin-left: 36%;
+    }
+}
+
+@media (min-width: 5200px){
+    .conatiner{
+        margin-left: 46%;
+    }
+}

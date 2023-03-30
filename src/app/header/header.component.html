@@ -1,0 +1,49 @@
+<div class="conatiner">
+    <span class="headerBrand">atom</span>
+</div>
+<a class="btn btn-primary" data-bs-toggle="collapse" href="#offcanvasID" role="button"
+    aria-controls="offcanvasID" (click)="openNav()">
+    <ul>
+        <li>
+            <i class="pi pi-align-justify" style="font-size: 2rem; z-index: 999;"></i>
+        </li>
+    </ul>
+</a>
+
+<div class="offcanvas offcanvas-start collapse" data-toggle="collapse" id="offcanvasID" aria-labelledby="offcanvasExampleLabel">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <ul class="nav flex-column">
+        <li class="row col-sm-12 nav-item listBlock">
+            <span class="col-sm-2">
+                <i class="pi pi-align-justify iconStyle"></i>
+            </span>
+            <span class="col-sm-10 iconNameStyle">
+                <a class="nav-link parentNavLink" routerLink="/">MENU</a>
+            </span>
+        </li>
+        <li class="row col-sm-12 nav-item listBlock">
+            <span class="col-sm-2">
+                <i class="pi pi-book iconStyle"></i>
+            </span>
+            <span class="col-sm-10 iconNameStyle">
+                <a class="nav-link parentNavLink" routerLink="/">COURSE MANAGEMENT</a>
+                <a class="row col-sm-12 nav-item listBlockChild">
+                    <span class="col-sm-5 iconNameStyle">
+                        <a class="nav-link" routerLink="/">COURSES</a>
+                    </span>
+                    <span class="col-sm-5 iconNameStyle">
+                        <a class="nav-link" routerLink="/create-new-book">CREATE NEW BOOK</a>
+                    </span>
+                </a>
+            </span>
+        </li>
+        <li class="row col-sm-12 nav-item listBlock">
+            <span class="col-sm-2">
+                <i class="pi pi-users iconStyle"></i>
+            </span>
+            <span class="col-sm-10 iconNameStyle">
+                <a class="nav-link parentNavLink" routerLink="/about-us">ABOUT US</a>
+            </span>
+        </li>
+      </ul>
+</div>

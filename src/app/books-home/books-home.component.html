@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="row col-sm-12">
+        <span class="col-sm-2 bookHeaderText">
+            Books
+        </span>
+        <span class="col-sm-7">
+        </span>
+        <span class="col-sm-3">
+            <button class="btn btn-primary newBookButton" (click)="showDialog()">
+                Create New Book
+            </button>
+        </span>
+    </div>
+    <p-dialog header="Create New Book" [(visible)]="visible" [style]="{width: '50vw'}">
+        <form [formGroup]="addBookForm">
+            <div class="row form-group" style="margin-top: 30px;">
+                <span class="col-sm-2" style="padding-top: 5px;">
+                    <label for="title"><b>Title</b></label>
+                </span>
+                <span class="col-sm-9">
+                    <input class="form-control" id="stock" placeholder="Title" 
+                    formControlName="title" style="width: 57%;"/>
+                </span>
+            </div>
+            <div class="row form-group" style="margin-top: 30px;">
+                <span class="col-sm-2" style="padding-top: 5px;">
+                    <label for="author"><b>Author</b></label>
+                </span>
+                <span class="col-sm-9">
+                    <input class="form-control" id="stock" placeholder="Author" 
+                    formControlName="author" style="width: 57%;"/>
+                </span>
+            </div>
+            <div class="row form-group" style="margin-top: 30px;">
+                <span class="col-sm-2" style="padding-top: 5px;">
+                    <label for="publisher"><b>Publisher</b></label>
+                </span>
+                <span class="col-sm-9">
+                    <input class="form-control" id="stock" placeholder="Publisher" 
+                    formControlName="publisher" style="width: 57%;"/>
+                </span>
+            </div>
+            <div class="row form-group" style="margin-top: 30px;">
+                <span class="col-sm-2">
+                    <label for="publishedDate">
+                        <b>Published Date</b>
+                    </label>
+                </span>
+                <span class="col-sm-9">
+                    <p-calendar placeholder="Published Date"
+                    formControlName="publishedDate" [(ngModel)]="dateInput"></p-calendar>
+                </span>
+            </div>
+            
+            <div class="row form-group" style="margin-top: 30px;">
+                <span class="col-sm-3"></span>
+                <span class="col-sm-6">
+                    <button pButton type="button" class="p-button-success p-button-rounded" [disabled]="!addBookForm.valid" (click)="onAddBookSubmit()" style="margin-top: 3%;">
+                        Submit
+                    </button>
+                    <br/>
+                </span>
+            </div>
+            <div class="row form-group" style="margin-top: 30px;" *ngIf="displayMessage !== ''">
+                <span class="col-sm-2"></span>
+                <span class="col-sm-6">
+                    <span>
+                        {{displayMessage}}
+                    </span>
+                </span>
+            </div>
+           
+        </form>
+    </p-dialog>
+    <div class="searchBar">
+        <form>
+            <div class="row mb-4">
+              <div class="form-group col-md-9">
+                <div role="search" class="lb-none-v-margin m-directories-search" style="margin-bottom:10px;"
+                    data-search-scope="blog-posts" data-ui-scope="filtered-posts" data-lb-comp="directories-search"
+                    data-lb-comp-registered="true">
+                    <input role="searchbox" aria-label="Search" type="text" autocomplete="off" placeholder="&#xF002; Search"
+                        wfd-id="id55" style="width: 100%" name="search" [(ngModel)]="searchTerm" class="form-control form-control-underlined col-sm-10 searchInput"/>
+                    <span tabindex="0" class="m-hidden" aria-label="Clear Searchbox" role="button"></span>
+                </div>
+                </div>
+            </div>
+          </form>
+    </div>
+    <div>
+        <span class="allBooksHeader">All Books</span>
+        <p-scrollPanel [style]="{width: '100%', height: '700px'}">
+            <div class="row col-sm-12">
+                <div *ngFor="let book of booksDetails | searchPipe : searchTerm" class=" col-sm-5 book-block">
+                    <div class="surface-card p-4 shadow-2 border-round">
+                        <div class="row col-sm-12">
+                            <span class="text-3xl font-medium text-900" style="color: #356483 !important;">{{book.title}}</span>
+                            <br />
+                            <span>Authors: {{book.authors}}</span>
+                        </div>
+                        <div class="mb-3">
+                            <span>Publisher: {{book.publisher}}</span>
+                            <br />
+                            <span>Published Date: {{book.publishedDate}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-scrollPanel>
+    </div>
+</div>
